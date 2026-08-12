@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audi — Progress, Reimagined</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='none' stroke='white' stroke-width='2'/><circle cx='32' cy='32' r='20' fill='none' stroke='white' stroke-width='2'/><circle cx='32' cy='32' r='10' fill='none' stroke='white' stroke-width='2'/></svg>">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <!-- Audi Rings SVG -->
+      <svg viewBox="0 0 112 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="20" r="14" stroke="white" stroke-width="2.5"/>
+        <circle cx="36" cy="20" r="14" stroke="white" stroke-width="2.5"/>
+        <circle cx="56" cy="20" r="14" stroke="white" stroke-width="2.5"/>
+        <circle cx="76" cy="20" r="14" stroke="white" stroke-width="2.5"/>
+      </svg>
+    </a>
+
+    <div class="nav-links">
+      <a href="models.html">Models</a>
+      <a href="new-models.html">New</a>
+      <a href="electric.html">Electric</a>
+      <a href="shop.html">Shop</a>
+      <a href="game.html">Drive</a>
+      <a href="history.html">History</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="11" cy="11" r="7"/>
+          <path d="M21 21l-4.35-4.35"/>
+        </svg>
+      </button>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-bg" style="opacity:0">
+      <img src="img/a7.jpg" alt="Audi premium sports sedan" id="heroImg" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-label">The New Generation</p>
+      <h1 class="hero-title">Progress,<br>Reimagined.</h1>
+      <p class="hero-desc">
+        Introducing a new era of automotive excellence. Where cutting-edge engineering meets timeless design — crafted for those who demand more.
+      </p>
+      <div class="hero-ctas">
+        <a href="models.html" class="btn-primary">Explore the Model</a>
+        <a href="#technology" class="btn-secondary">Discover Technology</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============ MODELS SECTION ============ -->
+  <section class="section section-dark" id="models">
+    <p class="section-label">The Lineup</p>
+    <h2 class="section-title">Find Your Audi.</h2>
+    <p class="section-desc">
+      From executive saloons to commanding SUVs, every Audi is engineered to move you.
+    </p>
+
+    <div class="models-grid">
+      <!-- A4 -->
+      <a href="models.html" class="model-card reveal">
+        <div class="model-card-image">
+          <img src="img/a4.jpg" 
+               alt="Audi A4" loading="lazy">
+        </div>
+        <div class="model-card-body">
+          <span class="model-card-tag tag-petrol">Petrol</span>
+          <h3 class="model-card-name">A4</h3>
+          <p class="model-card-desc">The executive saloon that defined a generation. Progressive design meets everyday versatility.</p>
+          <p class="model-card-price">Starting from $41,900</p>
+          <span class="btn-primary">Explore</span>
+        </div>
+      </a>
+
+      <!-- A6 -->
+      <a href="models.html" class="model-card reveal">
+        <div class="model-card-image">
+          <img src="img/a6.jpg" 
+               alt="Audi A6" loading="lazy">
+        </div>
+        <div class="model-card-body">
+          <span class="model-card-tag tag-hybrid">Hybrid</span>
+          <h3 class="model-card-name">A6</h3>
+          <p class="model-card-desc">Business-class comfort with sports-car DNA. Advanced hybrid powertrain available.</p>
+          <p class="model-card-price">Starting from $56,900</p>
+          <span class="btn-primary">Explore</span>
+        </div>
+      </a>
+
+      <!-- A8 -->
+      <a href="models.html" class="model-card reveal">
+        <div class="model-card-image">
+          <img src="img/a8.jpg" 
+               alt="Audi A8" loading="lazy">
+        </div>
+        <div class="model-card-body">
+          <span class="model-card-tag tag-petrol">Petrol</span>
+          <h3 class="model-card-name">A8</h3>
+          <p class="model-card-desc">The pinnacle of luxury. Handcrafted interior, predictive suspension, and effortless authority.</p>
+          <p class="model-card-price">Starting from $88,900</p>
+          <span class="btn-primary">Explore</span>
+        </div>
+      </a>
+
+      <!-- Q5 -->
+      <a href="models.html" class="model-card reveal">
+        <div class="model-card-image">
+          <img src="img/q5.jpg" 
+               alt="Audi Q5" loading="lazy">
+        </div>
+        <div class="model-card-body">
+          <span class="model-card-tag tag-hybrid">Hybrid</span>
+          <h3 class="model-card-name">Q5</h3>
+          <p class="model-card-desc">The versatile SUV that fits your life. Spacious, intelligent, and ready for anything.</p>
+          <p class="model-card-price">Starting from $47,900</p>
+          <span class="btn-primary">Explore</span>
+        </div>
+      </a>
+
+      <!-- Q7 -->
+      <a href="models.html" class="model-card reveal">
+        <div class="model-card-image">
+          <img src="img/q7.jpg" 
+               alt="Audi Q7" loading="lazy">
+        </div>
+        <div class="model-card-body">
+          <span class="model-card-tag tag-hybrid">Hybrid</span>
+          <h3 class="model-card-name">Q7</h3>
+          <p class="model-card-desc">Seven seats. Zero compromise. Premium family mobility with quattro confidence.</p>
+          <p class="model-card-price">Starting from $60,900</p>
+          <span class="btn-primary">Explore</span>
+        </div>
+      </a>
+
+      <!-- Q8 -->
+      <a href="models.html" class="model-card reveal">
+        <div class="model-card-image">
+          <img src="img/q8.jpg" 
+               alt="Audi Q8" loading="lazy">
+        </div>
+        <div class="model-card-body">
+          <span class="model-card-tag tag-petrol">Petrol</span>
+          <h3 class="model-card-name">Q8</h3>
+          <p class="model-card-desc">The coupé-SUV that commands attention. Bold design, uncompromising performance.</p>
+          <p class="model-card-price">Starting from $73,900</p>
+          <span class="btn-primary">Explore</span>
+        </div>
+      </a>
+
+      <!-- e-tron GT -->
+      <a href="electric.html" class="model-card reveal">
+        <div class="model-card-image">
+          <img src="img/etron.jpg" 
+               alt="Audi e-tron GT" loading="lazy">
+        </div>
+        <div class="model-card-body">
+          <span class="model-card-tag tag-electric">Electric</span>
+          <h3 class="model-card-name">e-tron GT</h3>
+          <p class="model-card-desc">Electrifying performance. 0-60 in 3.9s. The future of grand touring starts here.</p>
+          <p class="model-card-price">Starting from $106,500</p>
+          <span class="btn-primary">Explore</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ ELECTRIC SECTION ============ -->
+  <section class="electric-section" id="electric">
+    <div class="electric-bg">
+      <img src="img/etron.jpg" 
+           alt="Audi e-tron electric vehicle" 
+           loading="lazy">
+    </div>
+    <div class="electric-overlay"></div>
+
+    <div class="electric-content reveal">
+      <p class="section-label">The Future Is Electric</p>
+      <h2 class="section-title">Electric, without compromise.</h2>
+      <p class="section-desc">
+        Pure electric driving that feels like Audi. Instant torque, zero emissions, and range that takes you further.
+      </p>
+
+      <div class="electric-stats">
+        <div>
+          <div class="electric-stat-value">488 <span style="font-size:18px">km</span></div>
+          <div class="electric-stat-label">Range (WLTP)</div>
+        </div>
+        <div>
+          <div class="electric-stat-value">3.9 <span style="font-size:18px">s</span></div>
+          <div class="electric-stat-label">0-100 km/h</div>
+        </div>
+        <div>
+          <div class="electric-stat-value">270 <span style="font-size:18px">kW</span></div>
+          <div class="electric-stat-label">Max Charging</div>
+        </div>
+      </div>
+
+      <a href="electric.html" class="btn-red">Explore Electric</a>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED STRIP ============ -->
+  <section class="featured-strip" id="performance">
+    <div class="featured-item reveal">
+      <div class="featured-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M18 20V10M12 20V4M6 20v-6"/>
+        </svg>
+      </div>
+      <h3>Performance</h3>
+      <p>quattro all-wheel drive, adaptive air suspension, and engines born on the track.</p>
+      <a href="#" class="featured-link">
+        Discover Performance
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="featured-item reveal" id="technology">
+      <div class="featured-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <path d="M8 21h8M12 17v4"/>
+        </svg>
+      </div>
+      <h3>Technology</h3>
+      <p>MMI touch response, Audi virtual cockpit, and over 40 driver assistance systems.</p>
+      <a href="#" class="featured-link">
+        Explore Technology
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="featured-item reveal" id="experience">
+      <div class="featured-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <polyline points="9,22 9,12 15,12 15,22"/>
+        </svg>
+      </div>
+      <h3>Experience</h3>
+      <p>Book a test drive, explore configurator options, or visit an Audi dealership near you.</p>
+      <a href="#" class="featured-link">
+        Start Your Journey
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="about">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg viewBox="0 0 112 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:28px">
+          <circle cx="16" cy="20" r="14" stroke="white" stroke-width="2.5"/>
+          <circle cx="36" cy="20" r="14" stroke="white" stroke-width="2.5"/>
+          <circle cx="56" cy="20" r="14" stroke="white" stroke-width="2.5"/>
+          <circle cx="76" cy="20" r="14" stroke="white" stroke-width="2.5"/>
+        </svg>
+        <p>Audi AG is a German automotive manufacturer of premium vehicles. Founded in 1909 by August Horch, the company is headquartered in Ingolstadt, Bavaria. Vorsprung durch Technik.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Models</h4>
+        <a href="models.html">A4</a>
+        <a href="models.html">A6</a>
+        <a href="models.html">A8</a>
+        <a href="models.html">Q5</a>
+        <a href="models.html">Q7</a>
+        <a href="models.html">Q8</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Electric</h4>
+        <a href="electric.html">e-tron GT</a>
+        <a href="electric.html">Q4 e-tron</a>
+        <a href="electric.html">Q8 e-tron</a>
+        <a href="electric.html">Charging</a>
+        <a href="electric.html">Range Calculator</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Investors</a>
+        <a href="#">Contact</a>
+        <a href="#">Dealers</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Audi AG. All rights reserved. Vorsprung durch Technik.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="5"/>
+            <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/>
+            <path d="M22.54 6.42a2.78 2.78 0 00-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 1.96A29.94 29.94 0 001 11.75a29.94 29.94 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.96 29.94 29.94 0 00.46-5.25 29.94 29.94 0 00-.46-5.37z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+  // Cinematic video-style hero with Ken Burns effect + light streaks
+  (function(){
+    var canvas=document.getElementById('heroCanvas');
+    if(!canvas)return;
+    var ctx=canvas.getContext('2d');
+    var img=document.getElementById('heroImg');
+    var W,H,time=0;
+
+    function resize(){
+      W=canvas.parentElement.offsetWidth;
+      H=canvas.parentElement.offsetHeight;
+      canvas.width=W;canvas.height=H;
+    }
+    resize();
+    window.addEventListener('resize',resize);
+
+    // Particles for light streaks
+    var particles=[];
+    for(var i=0;i<50;i++){
+      particles.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-0.5)*0.8,vy:-0.5-Math.random()*1.5,life:1,size:0.5+Math.random()*2.5,alpha:Math.random()});
+    }
+
+    function draw(now){
+      time=now*0.001;
+      resize();
+
+      // Dark base
+      ctx.fillStyle='#000';ctx.fillRect(0,0,W,H);
+
+      // Draw car image with slow Ken Burns zoom + slight pan
+      if(img.complete&&img.naturalWidth>0){
+        var zoom=1+Math.sin(time*0.15)*0.03;
+        var panX=Math.sin(time*0.2)*0.02;
+        var iw=W*zoom,ih=H*zoom;
+        var ix=-(iw-W)/2+W*panX,iy=-(ih-H)/2-H*0.05;
+        ctx.drawImage(img,ix,iy,iw,ih);
+      }
+
+      // Gradient overlay - darker at bottom
+      var g=ctx.createLinearGradient(0,0,0,H);
+      g.addColorStop(0,'rgba(0,0,0,0.3)');
+      g.addColorStop(0.4,'rgba(0,0,0,0.2)');
+      g.addColorStop(1,'rgba(0,0,0,0.7)');
+      ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+
+      // Light streak particles
+      for(var i=0;i<particles.length;i++){
+        var p=particles[i];
+        p.x+=p.vx;p.y+=p.vy;
+        p.life-=0.003;
+        if(p.life<=0||p.y<-10||p.y>H+10||p.x<-10||p.x>W+10){
+          p.x=(W*0.2+Math.random()*W*0.6);p.y=H+10;p.vx=(Math.random()-0.5)*0.6;p.vy=-0.3-Math.random()*2;p.life=1;p.alpha=Math.random();
+        }
+        ctx.strokeStyle='rgba(255,255,255,'+(p.alpha*p.life*0.3)+')';
+        ctx.lineWidth=p.size;
+        ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p.x-p.vx*8,p.y-p.vy*8);ctx.stroke();
+      }
+
+      // Subtle vignette
+      var vg=ctx.createRadialGradient(W/2,H/2,Math.min(W,H)*0.5,W/2,H/2,Math.max(W,H)*0.75);
+      vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(0,0,0,0.5)');
+      ctx.fillStyle=vg;ctx.fillRect(0,0,W,H);
+
+      requestAnimationFrame(draw);
+    }
+
+    if(img.complete)requestAnimationFrame(draw);
+    else img.addEventListener('load',function(){requestAnimationFrame(draw)});
+  })();
+  </script>
+</body>
+</html>

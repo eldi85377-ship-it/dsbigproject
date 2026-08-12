@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History — Audi</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .history-hero { padding: 180px 60px 80px; text-align: center; }
+    .history-hero h1 { font-size: clamp(42px, 6vw, 72px); font-weight: 200; letter-spacing: -1.5px; }
+    .history-hero p { color: var(--audi-light-gray); font-size: 16px; font-weight: 300; max-width: 600px; margin: 16px auto 0; line-height: 1.7; }
+    .timeline { max-width: 800px; margin: 0 auto; padding: 0 60px 100px; position: relative; }
+    .timeline::before { content: ''; position: absolute; left: 50%; transform: translateX(-50%); top: 0; bottom: 0; width: 1px; background: #333; }
+    .timeline-item { display: flex; align-items: flex-start; margin-bottom: 64px; position: relative; }
+    .timeline-item:nth-child(odd) { flex-direction: row; }
+    .timeline-item:nth-child(even) { flex-direction: row-reverse; }
+    .timeline-year { flex: 1; text-align: right; padding-right: 48px; }
+    .timeline-item:nth-child(even) .timeline-year { text-align: left; padding-right: 0; padding-left: 48px; }
+    .timeline-year span {
+      font-size: 48px; font-weight: 200; letter-spacing: -1px; color: var(--audi-red);
+      display: block; line-height: 1;
+    }
+    .timeline-dot {
+      position: absolute; left: 50%; top: 12px; transform: translateX(-50%);
+      width: 12px; height: 12px; background: var(--audi-red); border-radius: 50%;
+      border: 3px solid #000; z-index: 2;
+    }
+    .timeline-content { flex: 1; padding-left: 48px; }
+    .timeline-item:nth-child(even) .timeline-content { padding-left: 0; padding-right: 48px; }
+    .timeline-content h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.3px; margin-bottom: 8px; }
+    .timeline-content p { font-size: 14px; color: var(--audi-light-gray); font-weight: 300; line-height: 1.7; }
+    .timeline-img { margin-top: 16px; width: 100%; height: 180px; background: #0a0a0a; border: 1px solid #222; overflow: hidden; }
+    .timeline-img img { width: 100%; height: 100%; object-fit: cover; }
+    .stats-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; background: #222; border-top: 1px solid #222; border-bottom: 1px solid #222; }
+    .stat-block { background: #000; padding: 48px 24px; text-align: center; }
+    .stat-block .num { font-size: 42px; font-weight: 200; line-height: 1; margin-bottom: 8px; }
+    .stat-block .label { font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--audi-light-gray); }
+    @media (max-width: 768px) {
+      .timeline::before { left: 24px; }
+      .timeline-item, .timeline-item:nth-child(even) { flex-direction: column; padding-left: 48px; }
+      .timeline-year { text-align: left !important; padding: 0 !important; margin-bottom: 8px; }
+      .timeline-year span { font-size: 32px; }
+      .timeline-dot { left: 24px; }
+      .timeline-content { padding: 0 !important; }
+      .timeline-item:nth-child(even) .timeline-content { padding: 0 !important; }
+      .stats-row { grid-template-columns: repeat(2,1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar scrolled">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 112 40" fill="none"><circle cx="16" cy="20" r="14" stroke="white" stroke-width="2.5"/><circle cx="36" cy="20" r="14" stroke="white" stroke-width="2.5"/><circle cx="56" cy="20" r="14" stroke="white" stroke-width="2.5"/><circle cx="76" cy="20" r="14" stroke="white" stroke-width="2.5"/></svg>
+    </a>
+    <div class="nav-links">
+      <a href="models.html">Models</a>
+      <a href="new-models.html">New</a>
+      <a href="electric.html">Electric</a>
+      <a href="shop.html">Shop</a>
+      <a href="game.html">Drive</a>
+      <a href="history.html" style="color:#fff">History</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions"><button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button></div>
+  </nav>
+
+  <section class="history-hero">
+    <p class="section-label">Since 1909</p>
+    <h1>Vorsprung durch Technik.</h1>
+    <p>Over a century of innovation. From the first Horch automobile to the electric e-tron — the story of Audi is the story of progress.</p>
+  </section>
+
+  <div class="stats-row">
+    <div class="stat-block"><div class="num">1909</div><div class="label">Founded</div></div>
+    <div class="stat-block"><div class="num">100+</div><div class="label">Markets</div></div>
+    <div class="stat-block"><div class="num">1.9M</div><div class="label">Cars / Year</div></div>
+    <div class="stat-block"><div class="num">87k+</div><div class="label">Employees</div></div>
+  </div>
+
+  <div class="timeline" style="padding-top:80px">
+    <div class="timeline-item reveal">
+      <div class="timeline-year"><span>1909</span></div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>August Horch Founds Audi</h3>
+        <p>After leaving his first company (Horch), August Horch establishes Audi Automobilwerke GmbH in Zwickau, Germany. The name "Audi" is the Latin translation of "Horch" (meaning "listen").</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-year"><span>1932</span></div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Auto Union Is Born</h3>
+        <p>Four brands — Audi, DKW, Horch, and Wanderer — merge to form Auto Union AG. The iconic four-ring logo is created, representing the unity of these four Saxon manufacturers.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-year"><span>1965</span></div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Volkswagen Acquisition</h3>
+        <p>Volkswagen Group acquires Auto Union from Daimler-Benz. The Audi name is revived for a new generation of vehicles, beginning with the Audi 72 (later renamed Audi 80).</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-year"><span>1969</span></div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>NSU Merger</h3>
+        <p>Auto Union merges with NSU Motorenwerke to form Audi NSU Auto Union AG. NSU brings rotary engine expertise and the legendary Ro 80 to the portfolio.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-year"><span>1980</span></div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>The quattro Revolution</h3>
+        <p>Audi unveils the quattro — the first all-wheel-drive production car. It dominates rally racing, winning four World Rally Championship titles and changing automotive engineering forever.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-year"><span>1994</span></div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Audi A8 — Aluminum Revolution</h3>
+        <p>The first generation A8 debuts with the Audi Space Frame — an all-aluminum body that reduces weight while increasing rigidity. It establishes Audi in the luxury segment.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-year"><span>2006</span></div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>R8 — The Supercar</h3>
+        <p>Audi launches the R8 mid-engine supercar. Sharing DNA with the Le Mans-winning R8 race car, it proves Audi can compete with Ferrari and Porsche.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-year"><span>2018</span></div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>e-tron — Electric Era Begins</h3>
+        <p>The Audi e-tron becomes the brand's first fully electric production vehicle. 400 hp, 400 km range, and 150 kW charging mark Audi's commitment to an electric future.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-year"><span>2026</span></div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>All-Electric Future</h3>
+        <p>Audi commits to launching only fully electric models from 2026 onward, with the last internal combustion engine vehicle rolling off the line by 2033. The future is electric.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg viewBox="0 0 112 40" fill="none" style="height:28px"><circle cx="16" cy="20" r="14" stroke="white" stroke-width="2.5"/><circle cx="36" cy="20" r="14" stroke="white" stroke-width="2.5"/><circle cx="56" cy="20" r="14" stroke="white" stroke-width="2.5"/><circle cx="76" cy="20" r="14" stroke="white" stroke-width="2.5"/></svg>
+        <p>Audi AG. Vorsprung durch Technik — Advantage Through Technology. Since 1909.</p>
+      </div>
+      <div class="footer-col"><h4>Models</h4><a href="models.html">A4</a><a href="models.html">A8</a><a href="electric.html">e-tron GT</a></div>
+      <div class="footer-col"><h4>Milestones</h4><a href="history.html">1909 Founding</a><a href="history.html">1980 quattro</a><a href="history.html">2018 e-tron</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="shop.html">Shop</a><a href="contact.html">Contact</a><a href="#">Careers</a></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Audi AG. Vorsprung durch Technik.</p></div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
